@@ -4,5 +4,5 @@
     <a href="tipoProcessoForm"><button>Adicionar Tipo de Processo</button></a><br><br>
     <a href="viewTipoProcesso"><button>Visualizar Tipo de Processo</button></a><br><br>
     <a href="processoForm"><button>Adicionar Processo</button></a><br><br>
-    <a href="viewProcesso"><button>Visualizar Processos</button></a>
+    <a href="viewProcesso"><button>Consultar Processos</button></a>
 </div>
