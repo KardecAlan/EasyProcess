@@ -10,7 +10,7 @@
          </tr>
          <tr>
           <td>Tipo de Processo :</td>
-          <td><form:select path="tipoProcessoId">
+          <td><form:select path="tipoProcessoId" required="true">
            <c:forEach items="${listTipoProcesso}" var="p">
             <option value="${p.id}">${p.nome}</option>
            </c:forEach>
@@ -22,16 +22,16 @@
          </tr>
          <tr>
          <td>Objetivo : </td>
-         <td><form:input path="objetivo"  /></td>
+         <td><form:input path="objetivo" required="true"  /></td>
          </tr>
          <tr>
          <td>Data de Entrada : </td>
-         <td><form:input path="dataEntrada" type="date" /></td>
+         <td><form:input path="dataEntrada" type="date" required="true" /></td>
          </tr>
          <tr>
          <tr>
          <td>Valor do Recurso : </td>
-         <td><form:input path="valorRecurso"  /></td>
+         <td><form:input path="valorRecurso" required="true" /></td>
          </tr>
          <tr>
           <td> </td>

@@ -10,7 +10,7 @@
          </tr>
          <tr>
           <td>Nome : </td>
-          <td><form:input path="nome"  /></td>
+          <td><form:input path="nome" required="true" /></td>
          </tr>
          <tr>
           <td> </td>
