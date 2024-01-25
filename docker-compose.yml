@@ -1,0 +1,31 @@
+version: "2.4"
+services:
+  oraclexe:
+    image: wnameless/oracle-xe-11g-r2
+    container_name: oraclexe
+    volumes:
+      - ./oraclexe:/docker-entrypoint-initdb.d
+      - oradata:/u01/app/oracle/
+    environment:
+      - ORACLE_DISABLE_ASYNCH_IO=true
+      - ORACLE_ALLOW_REMOTE=true
+    ports:
+      - 1521:1521
+    networks:
+      - oracle-net
+
+  easyprocess:
+    build: .
+    container_name: easyprocess
+    environment:
+      - CATALINA_OPTS=-Duser.timezone=America/Belem -Duser.country=BR -Duser.language=pt
+    ports:
+      - 8080:8080
+    networks:
+      - oracle-net
+
+networks:
+  oracle-net:
+    name: oracle-net
+volumes:
+  oradata:
